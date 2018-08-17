@@ -35,8 +35,6 @@ node {
         }
     }*/
     stage('create container') {
-        steps{
            sh 'ssh -o StrictHostKeyChecking=no ansible@100.74.111.156 "sudo docker run -d --name farrukh -p 4560:9000  artemis:0.0.1.0 " '
-        }
     }
 }
