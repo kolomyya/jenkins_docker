@@ -6,9 +6,9 @@ node {
 
         checkout scm
     }
-    stage("Create folder") {
+    stage('Create folder') {
       steps {
-        sh 'mkdir -p /usr/src/app'
+          sh 'mkdir -p /usr/src/app'
             }
     }
 
