@@ -24,14 +24,19 @@ node {
         }
     }
 
-    stage('Push image') {
+   # stage('Push image') {
         /* Finally, we'll push the image with two tags:
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('http://100.74.100.130:5000') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+        #docker.withRegistry('http://100.74.100.130:5000') {
+        #    app.push("${env.BUILD_NUMBER}")
+        #    app.push("latest")
+        }
+    }
+    stage('create container') {
+        steps{
+           sh 'ssh ansible@localhost "sudo docker run -d --name farrukh centos:6" '
         }
     }
 }
