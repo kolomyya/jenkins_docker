@@ -6,6 +6,10 @@ node {
 
         checkout scm
     }
+    stage("Create folder") {
+      steps {
+        sh 'mkdir -p /usr/src/app'
+            }
 
     stage('Build image') {
         /* This builds the actual image; synonymous to
