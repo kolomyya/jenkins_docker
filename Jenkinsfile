@@ -35,6 +35,6 @@ node {
         }
     }*/
     stage('create container') {
-           sh 'ssh -o StrictHostKeyChecking=no root@3.90.177.243 "sudo docker run -d  -p 8080:80 hellonode:v4 " '
+           sh 'ssh -o StrictHostKeyChecking=no root@3.90.177.243 "sudo docker run -d  -p 8080:80 getintodevops/hellonode:v4 " '
     }
 }
