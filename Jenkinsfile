@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
       
-        app = docker.build("september")
+        app = docker.build("/u/kolomyya")
     }
 
     stage('Test image') {
@@ -27,6 +27,6 @@ node {
         }
     }
     stage('create container') {
-           sh 'ssh -o StrictHostKeyChecking=no root@3.90.177.243 "sudo docker run -d  -p 4560:9000  artemis:0.0.1.0 " '
+           sh 'ssh -o StrictHostKeyChecking=no root@3.90.177.243 "sudo docker run -d  -p 8080:8000  september" '
     }
 }
