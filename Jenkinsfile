@@ -28,6 +28,6 @@ node {
     }
     
     stage('create container') {
-           sh 'ssh -o StrictHostKeyChecking=no root@3.90.177.243 "sudo docker run -d  -p 8080:8000  september" '
+           sh 'ssh -o StrictHostKeyChecking=no root@3.90.177.243 "sudo docker run -d  -p 8080:8000  kolomyya/september" '
     }
 }
