@@ -29,3 +29,4 @@ node {
     stage('create container') {
            sh 'ssh -o StrictHostKeyChecking=no root@3.90.177.243 "sudo docker run -d  -p 4560:9000  artemis:0.0.1.0 " '
     }
+}
