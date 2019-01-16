@@ -30,8 +30,7 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */ 
           docker.withRegistry('http://hub.docker.com/u/kolomyya') {
-           app.push("${env.BUILD_NUMBER}")
-           app.push("latest")
+           app.push("${env.BUILD_NUMBER}"
         }
     }
     stage('create container') {
