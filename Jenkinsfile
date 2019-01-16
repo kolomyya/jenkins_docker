@@ -12,7 +12,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("septembergroup")
+        app = docker.build("u/kolomyya")
     }
 
     stage('Test image') {
